@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-veof
+  namespace: mvp-demo-dev-namespace-vgxu-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/test-images@sha256:5043d648982bd4de86136ea7e8bd0a2a94140861ae3c35dea9e892d4d7361f81
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
